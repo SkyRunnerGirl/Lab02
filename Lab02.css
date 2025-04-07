@@ -24,15 +24,15 @@ Instructions: The HTML file is complete and images have been provided. The CSS f
 -----------------------------------------------------
 
 PART 1: Using the ELEMENT Selector:
-* Step 1: Target the html BODY element and give it a top and bottom margin of 1rem and a left and right margin of 5rem.
-* Step 2: Target the page title and give it a filter of drop-shadow with x offset of 2 pixels, y offset of 2 pixels, blur of 1 pixel and hex color code of #0f6a9e.(See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
-* Step 3: Target all of the paragraphs and lists on the page to give it a font size of 20 pixels. 
-* Step 4: Target all of the image elements, assign the following:
+* DStep 1: Target the html BODY element and give it a top and bottom margin of 1rem and a left and right margin of 5rem.
+* DStep 2: Target the page title and give it a filter of drop-shadow with x offset of 2 pixels, y offset of 2 pixels, blur of 1 pixel and hex color code of #0f6a9e.(See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+* DStep 3: Target all of the paragraphs and lists on the page to give it a font size of 20 pixels. 
+* DStep 4: Target all of the image elements, assign the following:
         * margin (top, right, bottom, and left) of 1 rem
         * border radius of 1rem (See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
         * box shadow with an x offset of 2 pixels, y offset of 2 pixels, blur of 2 pixels, spread radius of 1 pixel, a, rgb color of black with a transparency of 0.5. (See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
-* Step 5: The top image has a caption, give it a font color of rgb(0, 58, 66).
-* Step 6: Align the paragraph in the footer to the center.(See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+* DStep 5: The top image has a caption, give it a font color of rgb(0, 58, 66).
+* DStep 6: Align the paragraph in the footer to the center.(See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
 
 -----------------------------------------------------
 
@@ -69,10 +69,12 @@ html {
   background: linear-gradient(180deg, #84daf5, #89ffff, #affffa, #ffffff);
 }
 body {
+  margin: 1rem 5rem;
 }
 
 h1 {
   text-align: center;
+  filter: drop-shadow(2px 2px 1px #0f6a9e)
 }
 h2 {
   margin: 4rem auto 1rem auto;
@@ -80,6 +82,7 @@ h2 {
 }
 p,
 li {
+  font-size: 20px;
 }
 ol {
   padding: 20px;
@@ -89,13 +92,18 @@ ol li {
   padding: 10px 0;
 }
 img {
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px 1px rgb(0, 0, 0, 0.5);
 }
 figcaption {
   text-align: center;
   font-weight: bold;
+  color: rgb(0, 58, 66);
 }
 footer {
   margin: 2rem 0 2rem 0;
+  text-align: center;
 }
 
 /* ---CUSTOM CLASS NAME SELECTORS--- */
