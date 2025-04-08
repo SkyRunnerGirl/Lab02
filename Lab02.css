@@ -24,15 +24,15 @@ Instructions: The HTML file is complete and images have been provided. The CSS f
 -----------------------------------------------------
 
 PART 1: Using the ELEMENT Selector:
-* DStep 1: Target the html BODY element and give it a top and bottom margin of 1rem and a left and right margin of 5rem.
-* DStep 2: Target the page title and give it a filter of drop-shadow with x offset of 2 pixels, y offset of 2 pixels, blur of 1 pixel and hex color code of #0f6a9e.(See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
-* DStep 3: Target all of the paragraphs and lists on the page to give it a font size of 20 pixels. 
-* DStep 4: Target all of the image elements, assign the following:
+* Step 1: Target the html BODY element and give it a top and bottom margin of 1rem and a left and right margin of 5rem.
+* Step 2: Target the page title and give it a filter of drop-shadow with x offset of 2 pixels, y offset of 2 pixels, blur of 1 pixel and hex color code of #0f6a9e.(See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+* Step 3: Target all of the paragraphs and lists on the page to give it a font size of 20 pixels. 
+* Step 4: Target all of the image elements, assign the following:
         * margin (top, right, bottom, and left) of 1 rem
         * border radius of 1rem (See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
         * box shadow with an x offset of 2 pixels, y offset of 2 pixels, blur of 2 pixels, spread radius of 1 pixel, a, rgb color of black with a transparency of 0.5. (See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
-* DStep 5: The top image has a caption, give it a font color of rgb(0, 58, 66).
-* DStep 6: Align the paragraph in the footer to the center.(See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+* Step 5: The top image has a caption, give it a font color of rgb(0, 58, 66).
+* Step 6: Align the paragraph in the footer to the center.(See documentation https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
 
 -----------------------------------------------------
 
@@ -57,10 +57,7 @@ of the elements on the page can help fix issues with spacing too, especially if 
 
 /* ---UNIVERSAL SELECTOR--- */
 /* OPTIONAL ↓ REMOVE COMMENTS TO SEE RED BORDER:*/
-
-* {
-  border: 1px solid red;
-}
+/* Removed red border */
 
 /* ---ELEMENT SELECTORS--- */
 
@@ -74,7 +71,7 @@ body {
 
 h1 {
   text-align: center;
-  filter: drop-shadow(2px 2px 1px #0f6a9e)
+  filter: drop-shadow(2px 2px 1px #0f6a9e);
 }
 h2 {
   margin: 4rem auto 1rem auto;
@@ -110,6 +107,7 @@ footer {
 
 .banner-div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 #banner-long {
@@ -118,10 +116,12 @@ footer {
 }
 #banner-short {
   width: 230px;
+  display: none;
 }
 .img-div {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .tips-div {
@@ -134,6 +134,8 @@ footer {
   margin: 5rem auto;
   color: rgb(253, 197, 132);
   padding: 1rem 2rem;
+  background-color: rgb(0, 58, 66);
+  border-radius: 1rem;
 }
 .top-places-div h2 {
   text-align: center;
@@ -151,6 +153,8 @@ footer {
 
 @media only screen and (max-width: 1100px) {
   .tips-div {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -169,8 +173,10 @@ footer {
     width: 230px;
   }
   #banner-long {
+    display: none;
   }
   #banner-short {
+    display: block;
   }
 }
 /* ------------------------- */
